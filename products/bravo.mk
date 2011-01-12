@@ -2,10 +2,10 @@
 $(call inherit-product, device/htc/bravo/full_bravo.mk)
 
 # Inherit some common cyanogenmod stuff.
-$(call inherit-product, vendor/cyanogen/products/common.mk)
+$(call inherit-product, vendor/redux/products/common.mk)
 
 # Include GSM stuff
-$(call inherit-product, vendor/cyanogen/products/gsm.mk)
+$(call inherit-product, vendor/redux/products/gsm.mk)
 
 #
 # Setup device specific product configuration.
