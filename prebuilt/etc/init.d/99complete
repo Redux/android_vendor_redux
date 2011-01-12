@@ -1,0 +1,4 @@
+#!/system/bin/sh
+
+sync;
+setprop redux.filesystem.ready 1;
