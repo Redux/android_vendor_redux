@@ -10,7 +10,7 @@ $(call inherit-product, vendor/redux/products/gsm.mk)
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_bravo
+PRODUCT_NAME := bravo
 PRODUCT_BRAND := htc_wwe
 PRODUCT_DEVICE := bravo
 PRODUCT_MODEL := HTC Desire
@@ -20,10 +20,10 @@ PRODUCT_BUILD_PROP_OVERRIDES += BUILD_ID=GRH78 BUILD_DISPLAY_ID=GRH78 PRODUCT_NA
 # Build kernel
 PRODUCT_SPECIFIC_DEFINES += TARGET_PREBUILT_KERNEL=
 PRODUCT_SPECIFIC_DEFINES += TARGET_KERNEL_DIR=kernel-msm
-PRODUCT_SPECIFIC_DEFINES += TARGET_KERNEL_CONFIG=cyanogen_bravo_defconfig
+PRODUCT_SPECIFIC_DEFINES += TARGET_KERNEL_CONFIG=redux_bravo_defconfig
 
 # Extra Bravo (CDMA/GSM) overlay
-PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/bravo
+PRODUCT_PACKAGE_OVERLAYS += vendor/redux/overlay/bravo
 
 # Add proprietary apps and extra packages
 PRODUCT_PACKAGES += FM \
