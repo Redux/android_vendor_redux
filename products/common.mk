@@ -1,6 +1,6 @@
 # Generic cyanogenmod product
-PRODUCT_NAME := cyanogen
-PRODUCT_BRAND := cyanogen
+PRODUCT_NAME := redux
+PRODUCT_BRAND := redux
 PRODUCT_DEVICE := generic
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
@@ -23,14 +23,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.android.dateformat=MM-dd-yyyy \
     ro.com.android.dataroaming=false
 
-# CyanogenMod specific product packages
-#    DSPManager
-
-# Extra tools in CyanogenMod
-PRODUCT_PACKAGES += \
-    openvpn
-
-# Common CM overlay
+# Common redux overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/redux/overlay/common
 
 # Bring in some audio files
@@ -56,6 +49,7 @@ PRODUCT_COPY_FILES += \
     vendor/redux/prebuilt/xbin/irssi:system/xbin/irssi \
     vendor/redux/prebuilt/xbin/powertop:system/xbin/powertop \
     vendor/redux/prebuilt/xbin/openvpn-up.sh:system/xbin/openvpn-up.sh
+
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
@@ -63,7 +57,6 @@ PRODUCT_COPY_FILES += \
 # Always run in insecure mode, enables root on user build variants
 #ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=0
 
-#ifdef GOOGLE_APPS=true
     PRODUCT_COPY_FILES += \
 	vendor/redux/proprietary/gapps/app/GenieWidget.apk:/system/app/GenieWidget.apk \
 	vendor/redux/proprietary/gapps/app/Gmail.apk:/system/app/Gmail.apk \
@@ -74,7 +67,6 @@ PRODUCT_COPY_FILES += \
 	vendor/redux/proprietary/gapps/app/GooglePartnerSetup.apk:/system/app/GooglePartnerSetup.apk \
 	vendor/redux/proprietary/gapps/app/GoogleQuickSearchBox.apk:/system/app/GoogleQuickSearchBox.apk \
 	vendor/redux/proprietary/gapps/app/GoogleServicesFramework.apk:/system/app/GoogleServicesFramework.apk \
-	vendor/redux/proprietary/gapps/app/googlevoice.apk:/system/app/GoogleVoice.apk \
 	vendor/redux/proprietary/gapps/app/kickback.apk:/system/app/Kickback.apk \
 	vendor/redux/proprietary/gapps/app/LatinImeTutorial.apk:/system/app/LatinImeTutorial.apk \
 	vendor/redux/proprietary/gapps/app/Maps.apk:/system/app/Maps.apk \
@@ -97,12 +89,7 @@ PRODUCT_COPY_FILES += \
 	vendor/redux/proprietary/gapps/framework/com.google.android.maps.jar:/system/framework/com.google.android.maps.jar \
 	vendor/redux/proprietary/gapps/lib/libmicrobes_jni.so:/system/lib/libmicrobes_jni.so \
 	vendor/redux/proprietary/gapps/lib/libvoicesearch.so:/system/lib/libvoicesearch.so
-
-#else
-#    PRODUCT_PACKAGES += \
-#	Provision \
-#	GoogleSearch
-#endif
+#	vendor/redux/proprietary/gapps/app/googlevoice.apk:/system/app/GoogleVoice.apk
 
 PRODUCT_PACKAGES += \
     LatinIME

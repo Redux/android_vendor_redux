@@ -1,7 +1,6 @@
 #!/bin/sh
 #
-# Squish a CM otapackage for distribution
-# cyanogen
+# Squish an otapackage for distribution
 #
 
 OUT_TARGET_HOST=`uname -a | grep Darwin`
@@ -23,22 +22,19 @@ if [ -z "$OUT" -o ! -d "$OUT" ]; then
 	exit 1
 fi
 
-OTAPACKAGE=$OUT/$TARGET_PRODUCT-ota-$TARGET_BUILD_VARIANT.$LOGNAME.zip
+#OTAPACKAGE=$OUT/$TARGET_PRODUCT-ota-$TARGET_BUILD_VARIANT.$LOGNAME.zip
+OTAPACKAGE=$OUT/$TARGET_PRODUCT-ota-eng.$LOGNAME.zip
 if [ ! -f "$OTAPACKAGE" ]; then
 	echo "$OTAPACKAGE doesn't exist!";
 	exit 1
 fi
 
-OPTICHARGER=$ANDROID_BUILD_TOP/vendor/cyanogen/tools/opticharger
+OPTICHARGER=$ANDROID_BUILD_TOP/vendor/redux/tools/opticharger
 QUIET=-q
 DELETE_BINS="applypatch applypatch_static check_prereq recovery updater"
 
 
 # Some products want a squashfs for xbin for space
-case "$TARGET_PRODUCT" in
-	cyanogen_dream_sapphire) WANT_SQUASHFS=1 ;;
-	*) WANT_SQUASHFS=0 ;;
-esac
 
 if [ "$WANT_SQUASHFS" -eq 1 ]; then
 	fatal=0

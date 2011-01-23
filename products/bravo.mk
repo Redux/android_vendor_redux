@@ -15,7 +15,7 @@ PRODUCT_BRAND := htc_wwe
 PRODUCT_DEVICE := bravo
 PRODUCT_MODEL := HTC Desire
 PRODUCT_MANUFACTURER := HTC
-PRODUCT_BUILD_PROP_OVERRIDES += BUILD_ID=GRH78 BUILD_DISPLAY_ID=GRH78 PRODUCT_NAME=htc_bravo BUILD_FINGERPRINT=htc_wwe/htc_bravo/bravo/bravo:2.2/GRH78/226611:user/release-keys TARGET_BUILD_TYPE=userdebug BUILD_VERSION_TAGS=release-keys PRIVATE_BUILD_DESC="2.10.405.2 CL226611 release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += BUILD_ID=FRF91 BUILD_DISPLAY_ID=GRH78C PRODUCT_NAME=htc_bravo BUILD_FINGERPRINT=htc_wwe/htc_bravo/bravo/bravo:2.2/FRF91/226611:user/release-keys TARGET_BUILD_TYPE=userdebug BUILD_VERSION_TAGS=release-keys PRIVATE_BUILD_DESC="2.10.405.2 CL226611 release-keys"
 
 # Build kernel
 PRODUCT_SPECIFIC_DEFINES += TARGET_PREBUILT_KERNEL=
@@ -26,20 +26,12 @@ PRODUCT_SPECIFIC_DEFINES += TARGET_KERNEL_CONFIG=redux_bravo_defconfig
 PRODUCT_PACKAGE_OVERLAYS += vendor/redux/overlay/bravo
 
 # Add proprietary apps and extra packages
-PRODUCT_PACKAGES += FM \
-#    Torch
+PRODUCT_PACKAGES += FM
 
 
 
 PRODUCT_COPY_FILES += \
-   vendor/redux/proprietary/Zeam.apk:system/app/Zeam.apk \
-   vendor/redux/proprietary/Winamp.apk:system/app/Winamp.apk
-
-# Extra RIL settings
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.ril.enable.managed.roaming=1 \
-    ro.ril.oem.nosim.ecclist=911,112,113,115,117,999,000,08,118,120,122,110,119,995 \
-    ro.ril.emc.mode=2
+   vendor/redux/proprietary/Zeam.apk:system/app/Zeam.apk
 
 #
 # Set ro.modversion
@@ -48,6 +40,11 @@ ifdef RELEASE
     PRODUCT_PROPERTY_OVERRIDES += \
 	ro.modversion=Redux-v1.0.0
 else
+ifdef RC
+   PRODUCT_PROPERTY_OVERRIDES += \
+	ro.modversion=Redux-v1.0.0-RC3
+else
     PRODUCT_PROPERTY_OVERRIDES += \
     	ro.modversion=Redux-SNAPHSOT-$(shell date +%m%d%Y)
+endif
 endif
