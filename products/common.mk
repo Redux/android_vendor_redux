@@ -39,7 +39,6 @@ PRODUCT_COPY_FILES += \
     vendor/redux/prebuilt/etc/profile:system/etc/profile \
     vendor/redux/prebuilt/etc/init.local.rc:system/etc/init.local.rc \
     vendor/redux/prebuilt/etc/init.d/10apps2sd:system/etc/init.d/10apps2sd \
-    vendor/redux/prebuilt/etc/init.d/90screenstate_scaling:system/etc/init.d/90screenstate_scaling \
     vendor/redux/prebuilt/etc/init.d/99complete:system/etc/init.d/99complete \
     vendor/redux/prebuilt/bin/handle_compcache:system/bin/handle_compcache \
     vendor/redux/prebuilt/bin/compcache:system/bin/compcache \
@@ -49,6 +48,7 @@ PRODUCT_COPY_FILES += \
     vendor/redux/prebuilt/xbin/irssi:system/xbin/irssi \
     vendor/redux/prebuilt/xbin/powertop:system/xbin/powertop \
     vendor/redux/prebuilt/xbin/openvpn-up.sh:system/xbin/openvpn-up.sh
+#    vendor/redux/prebuilt/etc/init.d/90screenstate_scaling:system/etc/init.d/90screenstate_scaling
 
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
