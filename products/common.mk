@@ -40,6 +40,7 @@ PRODUCT_COPY_FILES += \
     vendor/redux/prebuilt/etc/profile:system/etc/profile \
     vendor/redux/prebuilt/etc/init.local.rc:system/etc/init.local.rc \
     vendor/redux/prebuilt/etc/init.d/10apps2sd:system/etc/init.d/10apps2sd \
+    vendor/redux/prebuilt/etc/init.d/11dalviklocation:system/etc/init.d/11dalviklocation \
     vendor/redux/prebuilt/etc/init.d/99complete:system/etc/init.d/99complete \
     vendor/redux/prebuilt/bin/handle_compcache:system/bin/handle_compcache \
     vendor/redux/prebuilt/bin/compcache:system/bin/compcache \
