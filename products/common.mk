@@ -31,6 +31,7 @@ include frameworks/base/data/sounds/OriginalAudio.mk
 
 PRODUCT_COPY_FILES += \
     vendor/redux/prebuilt/bin/backuptool.sh:system/bin/backuptool.sh \
+    vendor/redux/prebuilt/bin/apns-conf.xml:system/etc/apns-conf.xml \
     vendor/redux/prebuilt/bin/verify_cache_partition_size.sh:system/bin/verify_cache_partition_size.sh \
     vendor/redux/prebuilt/etc/resolv.conf:system/etc/resolv.conf \
     vendor/redux/prebuilt/etc/sysctl.conf:system/etc/sysctl.conf \

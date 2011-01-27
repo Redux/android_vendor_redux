@@ -26,7 +26,9 @@ PRODUCT_SPECIFIC_DEFINES += TARGET_KERNEL_CONFIG=redux_bravo_defconfig
 PRODUCT_PACKAGE_OVERLAYS += vendor/redux/overlay/bravo
 
 # Add proprietary apps and extra packages
-PRODUCT_PACKAGES += FM
+PRODUCT_PACKAGES += \
+    FM \
+    hcitool
 
 
 
