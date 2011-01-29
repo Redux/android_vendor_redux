@@ -39,6 +39,7 @@ PRODUCT_COPY_FILES += \
     vendor/redux/prebuilt/etc/terminfo/u/unknown:system/etc/terminfo/u/unknown \
     vendor/redux/prebuilt/etc/profile:system/etc/profile \
     vendor/redux/prebuilt/etc/init.local.rc:system/etc/init.local.rc \
+    vendor/redux/prebuilt/etc/init.d/06mountdl:system/etc/init.d/06mountdl \
     vendor/redux/prebuilt/etc/init.d/10apps2sd:system/etc/init.d/10apps2sd \
     vendor/redux/prebuilt/etc/init.d/99complete:system/etc/init.d/99complete \
     vendor/redux/prebuilt/bin/handle_compcache:system/bin/handle_compcache \
