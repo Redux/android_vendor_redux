@@ -44,7 +44,7 @@ ifdef RELEASE
 else
 ifdef RC
    PRODUCT_PROPERTY_OVERRIDES += \
-	ro.modversion=Redux-v1.0.0-RC3
+	ro.modversion=Redux-v1.0.0-RC4
 else
     PRODUCT_PROPERTY_OVERRIDES += \
     	ro.modversion=Redux-SNAPHSOT-$(shell date +%m%d%Y)
