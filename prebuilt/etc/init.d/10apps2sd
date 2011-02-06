@@ -36,7 +36,7 @@ enablea2sd () {
     fi;
 
     # move apps from internal memory to sdcard
-    for i in app app-private;
+    for i in app app-private dalvik-cache;
     do
         if [ ! -d /sd-ext/$i ];
         then
