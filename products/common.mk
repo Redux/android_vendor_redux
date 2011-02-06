@@ -94,5 +94,9 @@ PRODUCT_COPY_FILES += \
 	vendor/redux/proprietary/gapps/lib/libvoicesearch.so:/system/lib/libvoicesearch.so
 #	vendor/redux/proprietary/gapps/app/googlevoice.apk:/system/app/GoogleVoice.apk
 
+# add the new boot animation
+PRODUCT_COPY_FILES += \
+	vendor/redux/prebuilt/media/bootanimation.zip:system/media/bootanimation.zip
+
 PRODUCT_PACKAGES += \
     LatinIME
