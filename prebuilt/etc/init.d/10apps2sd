@@ -36,7 +36,7 @@ enablea2sd () {
     fi;
 
     # move apps from internal memory to sdcard
-    for i in app app-private dalvik-cache;
+    for i in app app-private;
     do
         if [ ! -d /sd-ext/$i ];
         then
@@ -54,7 +54,7 @@ enablea2sd () {
     done;
 
     # symlink app dirs - they must be on the same filesystem
-    for i in app app-private dalvik-cache;
+    for i in app app-private;
     do
         if [ -d /data/$i ] && [ ! -h /data/$i ];
         then
@@ -78,7 +78,7 @@ enablea2sd () {
 }
 
 disablea2sd() {    # replace symlinks with directories so we can boot without sd
-    for i in app app-private dalvik-cache;
+    for i in app app-private;
     do
        if [ -h /data/$i ];
        then
