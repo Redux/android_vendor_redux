@@ -50,8 +50,6 @@ PRODUCT_COPY_FILES += \
     vendor/redux/prebuilt/xbin/irssi:system/xbin/irssi \
     vendor/redux/prebuilt/xbin/powertop:system/xbin/powertop \
     vendor/redux/prebuilt/xbin/openvpn-up.sh:system/xbin/openvpn-up.sh
-#    vendor/redux/prebuilt/etc/init.d/11dalviklocation:system/etc/init.d/11dalviklocation \
-#    vendor/redux/prebuilt/etc/init.d/90screenstate_scaling:system/etc/init.d/90screenstate_scaling
 
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
