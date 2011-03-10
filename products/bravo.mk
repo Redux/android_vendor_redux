@@ -30,11 +30,6 @@ PRODUCT_PACKAGES += \
     FM \
     hcitool
 
-
-
-PRODUCT_COPY_FILES += \
-   vendor/redux/proprietary/Zeam.apk:system/app/Zeam.apk
-
 #
 # Set ro.modversion
 #
