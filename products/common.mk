@@ -57,7 +57,6 @@ PRODUCT_COPY_FILES += \
 
 # Always run in insecure mode, enables root on user build variants
 #ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=0
-
     PRODUCT_COPY_FILES += \
 	vendor/redux/proprietary/gapps/app/GenieWidget.apk:/system/app/GenieWidget.apk \
 	vendor/redux/proprietary/gapps/app/Gmail.apk:/system/app/Gmail.apk \

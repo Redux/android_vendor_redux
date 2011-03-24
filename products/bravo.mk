@@ -25,6 +25,14 @@ PRODUCT_SPECIFIC_DEFINES += TARGET_KERNEL_CONFIG=redux_bravo_defconfig
 # Extra Bravo (CDMA/GSM) overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/redux/overlay/bravo
 
+ifdef THEMED
+    PRODUCT_PACKAGE_OVERLAYS += vendor/redux/overlay/hdpi-theme
+
+    PRODUCT_COPY_FILES += \
+	vendor/redux/proprietary/GOLauncherEX.apk:system/app/GOLauncherEX.apk \
+	vendor/redux/proprietary/GOLauncherEXNotification.apk:system/app/GOLauncherEXNotification.apk
+endif
+
 # Add proprietary apps and extra packages
 PRODUCT_PACKAGES += \
     FM \
@@ -35,11 +43,11 @@ PRODUCT_PACKAGES += \
 #
 ifdef RELEASE
     PRODUCT_PROPERTY_OVERRIDES += \
-	ro.modversion=Redux-v1.1.0
+	ro.modversion=Redux-v1.1.1
 else
 ifdef RC
    PRODUCT_PROPERTY_OVERRIDES += \
-	ro.modversion=Redux-v1.1.0-RC1
+	ro.modversion=Redux-v1.1.1-RC1
 else
     PRODUCT_PROPERTY_OVERRIDES += \
     	ro.modversion=Redux-SNAPHSOT-$(shell date +%m%d%Y)
