@@ -47,7 +47,6 @@ PRODUCT_COPY_FILES += \
     vendor/redux/prebuilt/bin/fix_permissions:system/bin/fix_permissions \
     vendor/redux/prebuilt/bin/sysinit:system/bin/sysinit \
     vendor/redux/prebuilt/xbin/htop:system/xbin/htop \
-    vendor/redux/prebuilt/xbin/irssi:system/xbin/irssi \
     vendor/redux/prebuilt/xbin/powertop:system/xbin/powertop \
     vendor/redux/prebuilt/xbin/openvpn-up.sh:system/xbin/openvpn-up.sh
 
