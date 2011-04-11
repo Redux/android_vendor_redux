@@ -43,11 +43,11 @@ PRODUCT_PACKAGES += \
 #
 ifdef RELEASE
     PRODUCT_PROPERTY_OVERRIDES += \
-	ro.modversion=Redux-v1.1.1
+	ro.modversion=Redux-v1.1.2
 else
 ifdef RC
    PRODUCT_PROPERTY_OVERRIDES += \
-	ro.modversion=Redux-v1.1.1-RC1
+	ro.modversion=Redux-v1.1.2-RC1
 else
     PRODUCT_PROPERTY_OVERRIDES += \
     	ro.modversion=Redux-SNAPHSOT-$(shell date +%m%d%Y)
