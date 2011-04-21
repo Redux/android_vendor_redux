@@ -50,6 +50,6 @@ ifdef RC
 	ro.modversion=Redux-v1.1.2-RC1
 else
     PRODUCT_PROPERTY_OVERRIDES += \
-    	ro.modversion=Redux-SNAPHSOT-$(shell date +%m%d%Y)
+    	ro.modversion=Redux-SNAPSHOT-$(shell date +%m%d%Y)
 endif
 endif
